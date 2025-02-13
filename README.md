@@ -8,6 +8,7 @@ Specifically, I extracted the language each Tweet was sent in, what hashtags tha
 After consolidating the data into about 38KB in summarized JSON, I used Matplotlib to make a series of plots.
 Here are the plots that analyze top countries from the whole year, by hashtag.
 I only made two, but any combination is easy!
+Also, Matplotlib doesn't render Korean correctly, but the hashtag in the second graph is '#코로나바이'.
 
 <img src=graphs/all.country%23coronavirus.png width=100% />
 
