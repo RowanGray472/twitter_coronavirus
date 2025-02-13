@@ -24,21 +24,24 @@ if args.percent:
         counts[args.key][k] /= counts['_all'][k]
 
 # print the count values
-items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
+items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]))
 for k,v in items:
     print(k,':',v)
 
-top10 = items[:10]
-
+top10 = items[-10:]
 keys = [k for k, v in top10]
 values = [v for k, v in top10]
+if "country" in args.input_path:
+    x="countries"
+else:
+    x="languages"
 
 # Create the bar chart
 plt.figure(figsize=(10, 6))
 plt.bar(keys, values, color='skyblue')
-plt.xlabel('Keys')
-plt.ylabel('Values')
-plt.title('Top 10 Keys by Value (Sorted Ascending)')
+plt.xlabel(x)
+plt.ylabel(f'{args.key} occurances')
+plt.title(f'Top 10 {x} by {args.key}')
 plt.xticks(rotation=45)
 plt.tight_layout()
 
