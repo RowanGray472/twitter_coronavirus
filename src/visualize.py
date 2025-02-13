@@ -12,6 +12,7 @@ args = parser.parse_args()
 import os
 import json
 from collections import Counter,defaultdict
+import matplotlib.pyplot as plt
 
 # open the input path
 with open(args.input_path) as f:
@@ -26,3 +27,20 @@ if args.percent:
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
 for k,v in items:
     print(k,':',v)
+
+top10 = items[:10]
+
+keys = [k for k, v in top10]
+values = [v for k, v in top10]
+
+# Create the bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(keys, values, color='skyblue')
+plt.xlabel('Keys')
+plt.ylabel('Values')
+plt.title('Top 10 Keys by Value (Sorted Ascending)')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save the plot as a PNG image
+plt.savefig(f'{args.input_path + args.key}.png')
