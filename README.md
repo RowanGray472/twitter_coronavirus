@@ -9,15 +9,15 @@ After consolidating the data into about 38KB in summarized JSON, I used Matplotl
 Here are the plots that analyze top countries from the whole year, by hashtag.
 I only made two, but any combination is easy!
 
-<img src=graphs/all.country#coronavirus.png width=100% />
+<img src=graphs/all.country%23coronavirus.png width=100% />
 
-<img src=graphs/all.country#코로나바이러스.png width=100% />
+<img src=graphs/all.country%23코로나바이러스.png width=100% />
 
 And here are the plots that analyzed top languages from the whole year by hashtag.
 
-<img src=graphs/all.lang#coronavirus.png width=100% />
+<img src=graphs/all.lang%23coronavirus.png width=100% />
 
-<img src=graphs/all.lang#코로나바이러스.png width=100% />
+<img src=graphs/all.lang%23코로나바이러스.png width=100% />
 
 Then I got curious about the prevalence of different hashtags over time. 
 So I built a separate reducer that directly converts the mapped data into a cute graph.
