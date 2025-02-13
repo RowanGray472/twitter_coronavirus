@@ -3,15 +3,15 @@
 # command line args
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('--input_path',required=True)
-parser.add_argument('--key',required=True)
-parser.add_argument('--percent',action='store_true')
+parser.add_argument('--input_path', required=True)
+parser.add_argument('--key', required=True)
+parser.add_argument('--percent', action='store_true')
 args = parser.parse_args()
 
 # imports
 import os
 import json
-from collections import Counter,defaultdict
+from collections import Counter, defaultdict
 import matplotlib.pyplot as plt
 
 # open the input path
@@ -25,8 +25,6 @@ if args.percent:
 
 # print the count values
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]))
-for k,v in items:
-    print(k,':',v)
 
 top10 = items[-10:]
 keys = [k for k, v in top10]

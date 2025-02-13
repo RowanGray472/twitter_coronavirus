@@ -29,9 +29,6 @@ for path in args.input_paths:
         for hashtag in args.hashtags:
             if hashtag in tmp:
                 total[date][hashtag] = sum(tmp[hashtag].values())
-                for date_key, counter in total.items():
-                    print(f"{date_key}: {dict(counter)}")
-                print("-" * 40)
 
 # Extract dates
 dates = list(total.keys())
