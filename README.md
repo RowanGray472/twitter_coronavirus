@@ -1,7 +1,7 @@
 # Coronavirus Twitter Data Analysis
 
 This code in this repo analyzes all geotagged tweets sent in 2020 to track trends in Covid-related tweets.
-The dataset in question is about 2.7TB, so I used (MapReduce)[https://en.wikipedia.org/wiki/MapReduce] to parallelize the data extraction.
+The dataset in question is about 2.7TB, so I used [MapReduce](https://en.wikipedia.org/wiki/MapReduce) to parallelize the data extraction.
 
 Specifically, I extracted the language each Tweet was sent in, what hashtags that Tweet used, and what country the Twit was from.
 
